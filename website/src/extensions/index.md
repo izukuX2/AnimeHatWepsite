@@ -1,6 +1,6 @@
 ---
 title: Extensions
-description: Extension list for Mihon.
+description: Extension list for AnimeHat.
 lastUpdated: false
 editLink: false
 prev: false

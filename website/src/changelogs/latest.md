@@ -1,6 +1,6 @@
 ---
 title: Latest Changelog
-description: Changelog of the latest version of Mihon.
+description: Changelog of the latest version of AnimeHat.
 outline: false
 lastUpdated: false
 editLink: false
@@ -17,8 +17,8 @@ onMounted(async () => {
   try {
     const octokit = new Octokit()
     const { data } = await octokit.repos.listReleases({
-      owner: 'mihonapp',
-      repo: 'mihon',
+      owner: 'izukuX2',
+      repo: 'AnimeHat',
       per_page: 1,
     })
 

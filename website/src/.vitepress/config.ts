@@ -25,8 +25,8 @@ import themeConfig from './config/themeConfig'
 const octokit = new Octokit()
 const releaseDateCache = new Map<string, string>()
 
-const title = 'Mihon'
-const description = 'Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.'
+const title = 'AnimeHat'
+const description = 'Discover and watch anime, cartoon and more – easier than ever on your Android device.'
 
 const env = loadEnv('', process.cwd())
 const hostname: string = env.VITE_HOSTNAME || 'http://localhost:4173'
@@ -54,7 +54,7 @@ export default defineConfig({
         let publishedAt = releaseDateCache.get(tag)
         if (!publishedAt) {
           try {
-            const { data } = await octokit.repos.getReleaseByTag({ owner: 'mihonapp', repo: 'mihon', tag })
+            const { data } = await octokit.repos.getReleaseByTag({ owner: 'izukuX2', repo: 'AnimeHat', tag })
             publishedAt = data.published_at || data.created_at || ''
             if (publishedAt)
               releaseDateCache.set(tag, publishedAt)
@@ -68,8 +68,8 @@ export default defineConfig({
 
         const versionLabel = tag
         const desc = prettyDate
-          ? `Changelog for Mihon ${versionLabel}, released on ${prettyDate}`
-          : `Changelog for Mihon ${versionLabel}`
+          ? `Changelog for AnimeHat ${versionLabel}, released on ${prettyDate}`
+          : `Changelog for AnimeHat ${versionLabel}`
 
         pageData.frontmatter.description = pageData.frontmatter.description || desc
         pageData.title = pageData.frontmatter.title
