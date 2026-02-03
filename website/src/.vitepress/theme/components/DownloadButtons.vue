@@ -8,12 +8,12 @@ const downloadInformation = computed(() => ({
   beta: {
     tagName: release.beta.tag_name ?? 'r0000',
     asset: (release.beta.assets ?? [])
-      .find(a => /^(?:mihon|animehat|AnimeHat)-r\d{4,}.apk$/i.test(a.name)),
+      .find(a => /^(?:mihon|animehat)-r\d{4,}.apk$/i.test(a.name)),
   },
   stable: {
     tagName: release.stable.tag_name ?? 'v0.00.0',
     asset: (release.stable.assets ?? [])
-      .find(a => /^(?:mihon|animehat|AnimeHat)-v\d+\.\d+\.\d+.apk$/i.test(a.name)),
+      .find(a => /^(?:mihon|animehat)-v\d+\.\d+\.\d+.apk$/i.test(a.name)),
   },
 }))
 
