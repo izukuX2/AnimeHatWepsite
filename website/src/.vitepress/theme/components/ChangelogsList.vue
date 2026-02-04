@@ -44,7 +44,6 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
     <Contributors
       :body="release.body!"
       :author="release.author.login"
-      :tag="release.tag_name"
     />
   </div>
 </template>

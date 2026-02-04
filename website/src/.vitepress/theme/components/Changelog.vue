@@ -24,7 +24,6 @@ const changelog = computed(() => formatChangelog(md, release[type.value].body))
     <Contributors
       :body="release[type].body!"
       :author="release[type].author.login"
-      :tag="release[type].tag_name"
     />
   </div>
   <div class="fullChangelog">

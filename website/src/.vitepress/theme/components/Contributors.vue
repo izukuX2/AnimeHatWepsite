@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
 
-const props = defineProps<{ body: string, author: string, tag: string }>()
-const { body, author, tag } = toRefs(props)
-
-function isHigherThan(tagName: string, reference: string) {
-  return reference.localeCompare(tagName, undefined, { numeric: true, sensitivity: 'base' }) >= 0
-}
+const props = defineProps<{ body: string, author: string }>()
+const { body, author } = toRefs(props)
 
 const nonExistent = ref<string[]>([])
 

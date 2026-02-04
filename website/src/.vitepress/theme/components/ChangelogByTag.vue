@@ -57,7 +57,7 @@ function assetDate(dateStr?: string) {
     </h1>
     <time :datetime="release!.published_at!">{{ new Date(release!.published_at!).toLocaleDateString('en', { dateStyle: 'medium' }) }}</time>
     <div v-html="renderMarkdown(release!.body)" />
-    <Contributors :body="release!.body!" :author="release!.author.login" :tag="release!.tag_name" />
+    <Contributors :body="release!.body!" :author="release!.author.login" />
     <details v-if="release!.assets && release!.assets.length" class="assets mt-4">
       <summary>
         <h3>
