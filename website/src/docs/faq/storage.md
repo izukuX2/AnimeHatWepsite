@@ -6,7 +6,7 @@ description: Understanding Storage Permissions.
 
 # Storage location
 
-AnimeHat manages several things within a selected storage location, including automatic backups, chapter downloads, and the Local source.
+AnimeHat manages several things within a selected storage location, including automatic backups, episode downloads, and the Local source.
 
 ::: tip Selecting a storage location
 Keep the following in mind when setting up your Storage location:
@@ -28,7 +28,7 @@ The following illustrates the folder structure:
       <ul>
         <li>
           <img src="/img/logo-128px.png" alt="File" class="tree-icon icon-mihon">
-          <span class="file jpg">app.animehat_yyyy-mm-dd_hh-mm<span class="file-extension">.tachibk</span></span>
+          <span class="file jpg">app.animehat_yyyy-mm-dd_hh-mm<span class="file-extension">.ahbk</span></span>
         </li>
         <li>
           <img src="/img/logo-128px.png" alt="File" class="tree-icon icon-mihon">
@@ -108,9 +108,9 @@ The following illustrates the folder structure:
 
 Backup file name prefixes are unique for the app to avoid potential collisions between forks.
 
-## Migrating from Tachiyomi v0.14.x or earlier
+## Migrating from previous versions
 
-If you were using the default locations before, then simply select the existing `Tachiyomi` folder.
+If you were using the default locations before, then simply select the existing `AnimeHat` folder.
 
 ::: warning
 If you have an existing `downloads` folder, you should be selecting its parent folder (if applicable; avoid choosing the root of your storage) or you should move your downloads to a new location.
@@ -127,7 +127,7 @@ Since Android 11, most apps are enforced to use [Scoped Storage](https://develop
 **Scoped Storage**'s introduction affects various storage-related functions in **AnimeHat**.
 These functions may become slower due to **Scoped Storage**'s inherent latency, as discussed in detail [here on Scoped Storage](https://www.xda-developers.com/android-q-storage-access-framework-scoped-storage/).
 
-This can impact tasks like deleting chapters, library loading times, accessing local files like downloads or the local source, and more. As always, using internal storage is recommended over SD cards if latency is of concern.
+This can impact tasks like deleting episodes, library loading times, accessing local files like downloads or the local source, and more. As always, using internal storage is recommended over SD cards if latency is of concern.
 
 <style scoped>
   @import "../../.vitepress/theme/styles/tree.styl"

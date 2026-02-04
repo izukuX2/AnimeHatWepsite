@@ -1,17 +1,16 @@
 ---
 title: Backups
 titleTemplate: Guides
-description: Backups helps you prevent losing your library if something happens.
+description: Backups help you prevent losing your library if something happens.
 ---
 
 # Backups
 
-Backups can be created to save your library data and app settings.
-You can transfer and restore backup files between devices and [endorsed forks](/forks/).
+Backups can be created to save your library data and app settings. You can transfer and restore backup files between devices running **AnimeHat**.
 
 ::: tip How to create a backup
-1. Go to <nav to="data-and-storage">.
-1. Select **Create backup** and choose a location to save it.
+1. Go to **Settings** -> **Data and storage**.
+2. Select **Create backup** and choose a location to save it.
 
 <img
   class="only-light"
@@ -36,108 +35,43 @@ You can transfer and restore backup files between devices and [endorsed forks](/
 ## General backup details
 
 ### What is included in a backup?
-Backups (with pre-selected items) will contain the following:
+Backups will contain the following:
 
 #### Library data
-- **Library entries**
-- **Chapters** - Chapter data for saved entries
-- **Tracking** - Trackers added to individual saved entries
-- **History** - Read history for saved entries
-- **Categories**
-- **All read entries** - Keeps unsaved entry data (not included in automatic backups)
+- **Library entries** - Your saved anime, cartoons, and movies.
+- **Episodes** - Playback progress and metadata for saved entries.
+- **Tracking** - Trackers (MyAnimeList, AniList, etc.) linked to your entries.
+- **History** - Your full watch history.
+- **Categories** - Custom categories used to organize your library.
 
 #### Settings data
-- **App settings**
-- **Extension repos**
-- **Source settings**
-- **Include sensitive settings** - Tracker login tokens (not included by default)
+- **App settings** - General theme, player, and notification settings.
+- **Extension repos** - Links to your added source repositories.
+- **Source settings** - Custom configurations for individual sources.
 
 ### What is not included in a backup?
-- **Extensions**
-- **Downloaded chapter files** including [local source](/docs/guides/local-source/) chapters
-- **Custom covers** applied to entries
-
-::: tip
-To convert your backups to JSON or to view and edit the information outside of the app, you can use [AnimeHat Backup Viewer](https://github.com/Animeboynz/AnimeHat-Backup-Viewer).
-:::
+- **Extensions** (You must reinstall them upon restoration).
+- **Downloaded video files**.
+- **Custom covers** applied to entries.
 
 ## Restoring a backup
-Restore a compatible backup file in <nav to="data-and-storage">.
+Restore a backup file in **Settings** -> **Data and storage** -> **Restore backup**.
 
 ::: tip
 To ensure a smooth restoration process, remember to:
-
-1. Log into the [Tracking services](/docs/guides/tracking) you previously used.
-1. Download any extensions you've used in your backup.
-
-The app will list any missing trackers and/or extensions in the Restore screen.
+1. Log into your **Tracking services** (AniList, MAL, etc.).
+2. Reinstall the **Extensions** used in your library.
 :::
 
-### Transferring downloads to a new installation
-During the setup or after restoring a backup to **AnimeHat**:
-1. In <nav to="data-and-storage">, double-check your specified [Storage location](/docs/faq/storage) that **AnimeHat** has access to.
-1. Transfer or move your previously downloaded chapters into the "downloads" folder of your set Storage location.
-1. In <nav to="advanced">, tap on "Reindex downloads" to rescan your downloaded chapters.
+## Automatic Backups
 
-## Suggestions for backups
-
-### Enabling automatic backups
-It is highly recommended to enable automatic backups to ensure you can recover in case of any issues.
+It is highly recommended to enable automatic backups to ensure you never lose your progress.
 
 ::: tip How to enable automatic backups
-1. Go to <nav to="data-and-storage">.
-1. Set a **backup frequency** to schedule automatic backups.
-- Automatic backup files can be found in your specified [Storage location](/docs/faq/storage)'s "autobackup" folder.
-- In case of an error or issue, this allows you to retain a recent copy of your library data.
-
-<img
-  class="only-light"
-  src="/docs/guides/backups/automatic_backups.light.webp"
-  alt="Automatic Backups"
-  width="414"
-  height="402"
-  loading="lazy"
-  decoding="async"
-/>
-<img
-  class="only-dark"
-  src="/docs/guides/backups/automatic_backups.dark.webp"
-  alt="Automatic Backups"
-  width="414"
-  height="402"
-  loading="lazy"
-  decoding="async"
-/>
+1. Go to **Settings** -> **Data and storage**.
+2. Set a **Backup frequency** to schedule automatic backups.
+- Automatic backup files (ending in `.ahbk`) can be found in your specified **Storage location**'s `autobackup` folder.
 :::
 
-### Syncing backups with external cloud services
-Cross device sync in **AnimeHat** is not currently available, but users can use
-[FolderSync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite)
-in order to sync backup files to Drive automatically with the following steps:
-
-1. Install the FolderSync app from the link above.
-1. Enable [Automatic Backups](/docs/guides/backups#enabling-automatic-backups) and set it to your desired frequency.
-1. In the FolderSync app, navigate and select the "autobackup" folder to begin syncing to your preferred cloud service.
-1. On your second device, download the latest backup from your cloud service to restore into **AnimeHat**.
-
-Users who are familiar with [Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync)
-or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) can setup auto sync of their backups similarly.
-
-## Additional information for forks
-
-::: warning
-This section explores some extra details regarding restoring backups from [forks](/forks/).
-:::
-
-All **AnimeHat** (and **Tachiyomi**) [forks](/forks/) support the `.tachibk`/`.proto.gz` format to backup/restore your library.
-
-### Fork-specific settings
-All forks have fork-specific settings and changes that are saved in their Backups. There are some limitations when restoring fork-specific backups:
-  > For example: [TachiyomiSY](/forks/TachiyomiSY/) has the option to backup/restore saved searches.
-- Forks of forks (such as [TachiyomiJ2K](/forks/TachiyomiJ2K/) and [Yōkai](/forks/Yokai/)) could restore some if not all fork-specific settings, but it is not guaranteed.
-- These fork-specific settings will not be restored in **AnimeHat** and will be lost after restoring.
-
-Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring both legacy `.json` backups and `.proto.gz` backups.
-  > Users are recommended to update their `.json` backups to use the improved and efficient `.tachibk`/`.proto.gz` backups.
-
-Be aware of these limitations when dealing with backups in different **AnimeHat** and **Tachiyomi** forks.
+## Syncing with Cloud Services
+While built-in cloud sync is not currently available, you can use third-party apps like [FolderSync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite) to automatically sync your `autobackup` folder to Google Drive, Dropbox, or other services.

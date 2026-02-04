@@ -8,33 +8,17 @@ description: Frequently Asked Questions
 Frequently Asked Questions
 
 ## Why isn't AnimeHat on the Google Play Store?
-**AnimeHat** won't be on the **Google Play Store**.
-
-APK-based extensions conflict with [Google Play's content policy](https://play.google.com/about/developer-content-policy/).
-**Google** might take down the app due to certain content, which the developers wishes to avoid.
+**AnimeHat** will not be on the **Google Play Store**.
+The app provides access to third-party streaming sources which may conflict with [Google Play's policies](https://play.google.com/about/developer-content-policy/). To ensure the app remains feature-rich and independent, it is distributed directly via our GitHub releases.
 
 ## Is AnimeHat available for iOS/iPadOS?
-There is no iOS or iPadOS version and neither are there plans for one.
-Porting is difficult due to the separate codebases of iOS and Android apps.
-
-Any app proclaiming to be "**AnimeHat for iOS**" is not by us and should be treated as a scam.
+Currently, **AnimeHat** is exclusively available for **Android** devices. There are no immediate plans for an iOS version as the app is optimized specifically for the Android ecosystem.
 
 ## What is AnimeHat Beta?
-**AnimeHat Beta** is the latest preview version of the app.
-It showcases potential upcoming features, but it's more prone to bugs and crashes.
-
-::: warning CAUTION
-While it's ideal for users seeking the latest **AnimeHat** experience, it's essential to keep [auto-backup](/docs/guides/backups#enabling-automatic-backups) enabled to prevent library loss due to issues.
-:::
-
-## Can I read light novels?
-**AnimeHat** can't read light novels; it's an image parser, not a text parser.
+**AnimeHat Beta** (or Preview) is where we test the latest features like AI recommendations and UI polish before they reach the stable version. It's great for seeing what's next, but might be less stable than the regular version.
 
 ## Can I stream anime?
-**AnimeHat** isn't designed for anime streaming.
+Yes! **AnimeHat** is primarily designed as a high-performance anime streaming aggregator. It brings together various sources into one premium interface with advanced player controls.
 
-Projects using the **AnimeHat** name for anime streaming aren't affiliated with the main project.
-
-## What's a fork?
-Forks are alternate **AnimeHat** versions with distinct features.
-Get more details [here on forks](/forks/).
+## Can I watch cartoon and movies?
+Absolutely. **AnimeHat** indices content across various categories including Anime, Cartoon, and Movies, providing a unified experience for all your animation needs.

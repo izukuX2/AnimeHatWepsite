@@ -33,7 +33,7 @@ You can copy the following example and edit the details as needed:
 }
 ```
 ::: tip
-If you don't want to create the `details.json` file manually, you can use the android app [Koguma-Metadata](https://github.com/ghostbear/koguma-metadata/releases/latest), or [this website](https://local.mihon.tools).
+You can use any standard JSON editor to create the `details.json` file. Ensure that the field names match the example above for the app to recognize them correctly.
 :::
 
 ## Using a custom cover image
