@@ -6,14 +6,14 @@ import { data as release } from '../data/release.data'
 
 const downloadInformation = computed(() => ({
   beta: {
-    tagName: release.beta.tag_name ?? 'r0000',
+    tagName: release.beta.tag_name ?? 'v4.x.x',
     asset: (release.beta.assets ?? [])
-      .find(a => /^(?:mihon|animehat)-r\d{4,}.apk$/i.test(a.name)),
+      .find(a => /^(?:mihon|animehat|app)-.*\.apk$/i.test(a.name) || a.name === 'app-release.apk'),
   },
   stable: {
-    tagName: release.stable.tag_name ?? 'v0.00.0',
+    tagName: release.stable.tag_name ?? 'v4.0.1',
     asset: (release.stable.assets ?? [])
-      .find(a => /^(?:mihon|animehat)-v\d+\.\d+\.\d+.apk$/i.test(a.name)),
+      .find(a => /^(?:mihon|animehat|app)-.*\.apk$/i.test(a.name) || a.name === 'app-release.apk'),
   },
 }))
 

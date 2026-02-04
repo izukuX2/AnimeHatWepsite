@@ -5,7 +5,7 @@ import sidebar from './navigation/sidebar'
 
 const themeConfig: DefaultTheme.Config = {
   logo: {
-    src: '/img/logo-128px.png',
+    src: '/img/logo-animehat.png',
     width: 24,
     height: 24,
   },
